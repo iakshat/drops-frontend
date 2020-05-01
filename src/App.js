@@ -14,6 +14,7 @@ import Logout from './components/auth/Logout'
 import { connect } from 'react-redux';
 import { recoverAuth } from './store/recoverAuth'
 import { loginUser } from './store/authActions';
+import Approve from './components/admin/Approve'
 import Axios from 'axios';
 
 Axios.interceptors.request.use(config => {
@@ -35,7 +36,8 @@ Axios.interceptors.request.use(config => {
 class App extends Component {
 
   componentDidMount() {
-    localStorage.setItem("serverURL", "https://bloodbank-backend.herokuapp.com")
+    localStorage.setItem("serverURL", "https://drops-backend.herokuapp.com")
+    // localStorage.setItem("serverURL", "http://localhost:2000")
     document.getElementById("loader").style.display = "none";
     recoverAuth(this.props.loginUser)
   }
@@ -56,6 +58,7 @@ class App extends Component {
             <Route path="/inventory" component={Inventory} />
             <Route path="/demand-blood" component={BloodDemand} />
             <Route path="/donor-requests" component={DonorRequests} />
+            <Route path="/approve-certificates" component={Approve} />
           </div>
         </div>
       </BrowserRouter>
