@@ -66,7 +66,7 @@ class DonorRequest extends Component {
         return(
             <div className="container">
                 <h3>Previous Donation Requests</h3><br/><br/>
-                <div className="red-text" id="output">sdhfsn</div><br/>
+                <div className="red-text" id="output"></div><br/>
                 <div className="collection">
                     {ress}
                 </div>

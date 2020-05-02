@@ -58,7 +58,7 @@ class NavBar extends Component {
                             <i className="material-icons">menu</i>
                         </a>
                         <div className="center brand-logo">
-                            Drops
+                            <a href="/">Drops</a>
                         </div>
                     </div>
                     {notifBtn}

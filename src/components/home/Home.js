@@ -12,6 +12,11 @@ class Home extends Component {
                         on request. Connect with us now to donate to a greater cause!
                     . </h5>
                     <h4>Join Us Now!</h4>
+                <div className="page-footer white">
+                    <div className="container">
+                        <a className="center" href="https:www.github.com/iakshat"><h6>Made with ❤ by iakshat</h6></a>
+                    </div>
+                </div>
             </div>
         )
     }
