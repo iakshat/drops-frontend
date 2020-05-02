@@ -53,7 +53,7 @@ class Approve extends Component {
                 }
                 else if(res.data.status === "invalid query"){
                     document.getElementById("output").textContent = "YOU ARE NOT ALLOWED TO ACCESS THIS END POINT. GET BACK TO THE SAFE ZONE"
-                    setTimeout(() => {this.props.history.push("/");}, 1500);
+                    setTimeout(() => {this.props.history.push("/");}, 2500);
                 }
                 else{
                     document.getElementById("output").textContent = "Could not reject!"
