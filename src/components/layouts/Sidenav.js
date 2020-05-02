@@ -8,18 +8,20 @@ class SideNav extends Component {
 
     componentDidMount() {
 
-        var liBox = document.getElementById("side-nav");
-        var btns = liBox.getElementsByTagName("li");
-        for(var i = 0; i < btns.length; i++) {
-            var btn = btns[i];
-            btn.addEventListener("click", (e) => {
-                var curr = liBox.getElementsByClassName("active")[0];
-                console.log(curr)
-                if(curr)
-                    curr.className = "";
-                e.target.parentElement.className += " active";
-            })
-        }
+        window.initNavbar();
+
+        // var liBox = document.getElementById("side-nav");
+        // var btns = liBox.getElementsByTagName("li");
+        // for(var i = 0; i < btns.length; i++) {
+        //     var btn = btns[i];
+        //     btn.addEventListener("click", (e) => {
+        //         var curr = liBox.getElementsByClassName("active")[0];
+        //         console.log(curr)
+        //         if(curr)
+        //             curr.className = "";
+        //         e.target.parentElement.className += " active";
+        //     })
+        // }
     }
 
     render() {
@@ -30,7 +32,7 @@ class SideNav extends Component {
             <SignedOutLinks />
         )
         return(
-            <ul className="sidenav sidenav-fixed" id="side-nav">
+            <ul className="sidenav sidenav-fixed" id="slide-out">
 
                 <li className="logo">
                     <div className="brand-logo center">

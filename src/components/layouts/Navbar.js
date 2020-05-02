@@ -9,6 +9,10 @@ class NavBar extends Component {
         show : false
     }
 
+    componentDidMount(){
+        window.initNavbar();
+    }
+
     componentDidUpdate(){
         if(this.props.isLoggedIn && this.props.userData.userType === "donor"){
             var t = localStorage.getItem("serverURL")
@@ -50,7 +54,7 @@ class NavBar extends Component {
             <nav className="top-nav" style={{"backgroundColor" : "#e0383b"}}>
                 <div className="container">
                     <div className="nav-wrapper">
-                        <a className="top-nav sidenav-trigger hide-on-large-only left" href="#!">
+                        <a className="sidenav-trigger hide-on-large-only left" data-target="slide-out" href="#!">
                             <i className="material-icons">menu</i>
                         </a>
                         <div className="center brand-logo">
